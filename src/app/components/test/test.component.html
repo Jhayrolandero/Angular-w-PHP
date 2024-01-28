@@ -1,0 +1,31 @@
+<div class="flex flex-col items-center justify-center h-screen bg-gray-800">
+  <form
+    #usersForm="ngForm"
+    (ngSubmit)="getUserFormData(usersForm.value)"
+    action=""
+    class="flex flex-col gap-5 bg-black text-white px-36 py-28 rounded-md"
+  >
+    <p>username: {{ username }} password: {{ password }}</p>
+    <h4 class="text-center text-6xl mb-10 font-bold">Not a Login</h4>
+    <label for="username" class="text-xl font-bold">Username</label>
+    <input
+      id="username"
+      class="border-2 border-white px-3 py-2 text-black rounded-md"
+      [(ngModel)]="username"
+      name="username"
+    />
+    <label for="" class="text-xl font-bold">Password</label>
+    <input
+      type="password"
+      class="border-2 border-white px-3 py-2 text-black rounded-md"
+      [(ngModel)]="password"
+      name="password"
+    />
+
+    <input
+      type="submit"
+      value="Login"
+      class="px-3 py-2 bg-white text-black font-bold text-lg rounded-md"
+    />
+  </form>
+</div>
