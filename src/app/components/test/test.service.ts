@@ -5,14 +5,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TestService {
 
-  url : string = "http://localhost/angularphp/"
+  url : string = "http://localhost/angularphp/api/v1/users"
   constructor(private http: HttpClient) { }
 
   getUserFormData(data : any): any {
-    console.log(data) 
+    return this.http.get(this.url);
   }
-
-
+  
+  getUsers(){
+    return this.http.get(this.url);
+  }
   addUser(data: any): any {
     return this.http.post(this.url, data)
     .subscribe(

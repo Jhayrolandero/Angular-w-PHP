@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './components/test/test.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { PayrollComponent } from './components/payroll/payroll.component';
+import { PayrollTableComponent } from './components/payroll-table/payroll-table.component'
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    PayrollComponent,
+    PayrollTableComponent
   ],
   imports: [
     BrowserModule,
