@@ -14,6 +14,19 @@ export class TestComponent {
   getUserFormData(data : any): void {
     this.testService.addUser(data)
   }
+
+
+  getAllUsers() {
+    this.testService.getUsers()
+    .subscribe(
+      data => {console.log(data)}
+    , Error => {console.log(Error)}
+    )
+  }
+
+  ngOnInit() {
+    this.getAllUsers();
+  }
   username: string = ""
   password: string = ""
 }

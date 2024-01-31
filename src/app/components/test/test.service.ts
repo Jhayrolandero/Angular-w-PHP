@@ -14,7 +14,6 @@ export class TestService {
       .subscribe(
         data => (console.log(data)),
         error => (console.error(error))
-        
     )
   }
 
