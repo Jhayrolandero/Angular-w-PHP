@@ -5,11 +5,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TestService {
 
-  url : string = "http://localhost/angularphp/"
+  url : string = "http://localhost/PHP-w-Angular/"
   constructor(private http: HttpClient) { }
 
-  getUserFormData(data : any): any {
-    console.log(data) 
+  getUserFormData(data: any): any {
+    
+    return this.http.get(this.url)
+      .subscribe(
+        data => (console.log(data)),
+        error => (console.error(error))
+        
+    )
   }
 
 
@@ -17,7 +23,7 @@ export class TestService {
     return this.http.post(this.url, data)
     .subscribe(
       data => {console.log(data)},
-      error => {console.log(error)}
+      error => {console.log(error.statusText)}
     )
   }
 
