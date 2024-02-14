@@ -16,17 +16,17 @@ export class TestComponent {
   }
 
 
-  getAllUsers() {
-    this.testService.getUsers()
-    .subscribe(
-      data => {console.log(data)}
-    , Error => {console.log(Error)}
-    )
-  }
+  // getAllUsers() {
+  //   this.testService.getUsers()
+  //   .subscribe(
+  //     data => {console.log(data)}
+  //   , Error => {console.log(Error)}
+  //   )
+  // }
 
-  ngOnInit() {
-    this.getAllUsers();
-  }
+  // ngOnInit() {
+  //   this.getAllUsers();
+  // }
   username: string = ""
   password: string = ""
 }

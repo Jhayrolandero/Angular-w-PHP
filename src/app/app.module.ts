@@ -8,13 +8,15 @@ import { TestComponent } from './components/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PayrollComponent } from './components/payroll/payroll.component';
-import { PayrollTableComponent } from './components/payroll-table/payroll-table.component'
+import { PayrollTableComponent } from './components/payroll-table/payroll-table.component';
+import { LoginComponent } from './components/login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     PayrollComponent,
-    PayrollTableComponent
+    PayrollTableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

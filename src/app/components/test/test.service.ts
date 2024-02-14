@@ -4,19 +4,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TestService {
-
+  datas: any = []
   url : string = "http://localhost/PHP-w-Angular/"
   constructor(private http: HttpClient) { }
 
-  getUserFormData(data: any): any {
+  // getUserFormData(data: any): any {
     
-    return this.http.get(this.url)
-      .subscribe(
-        data => (console.log(data)),
-        error => (console.error(error))
-    )
-  }
+  //   return this.http.get(this.url)
+  //     .subscribe(
+  //       data => (this.datas = data),
+  //       error => (console.error(error))
+  //   )
+  // }
 
+  getUsers(): any {
+    return this.http.get(this.url)
+  }
 
   addUser(data: any): any {
     return this.http.post(this.url, data)
@@ -26,4 +29,5 @@ export class TestService {
     )
   }
 
+ 
 }
